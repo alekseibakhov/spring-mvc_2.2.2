@@ -7,5 +7,20 @@
 </head>
 <body>
 Cars!
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>model</th>
+        <th>color</th>
+    </tr>
+    <!--/*@thymesVar id="cars" type="car.id"*/-->
+    <th:block th:each="car : ${cars}">
+        <tr>
+            <td th:utext="${car.id}"></td>
+            <td th:utext="${car.model}"></td>
+            <td th:utext="${car.color}"></td>
+        </tr>
+    </th:block>
+    </table>
 </body>
 </html>
